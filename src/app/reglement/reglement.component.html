@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="title">
+    <h2>Règlement du mode {{mode}}</h2>
+  </div>
+
+  <p class="entete" *ngFor="let r of regles">
+    {{r.eliminatoire.entete}}
+  </p>
+</div>
+<div class="container mainFrame" *ngFor="let r of regles">
+  <div class="card" *ngFor="let r2 of r.eliminatoire.regle">
+    <div [innerHTML]="r2" class="card-body">
+      
+    </div>
+  </div>
+  Qui aura le plus de points à l'issue de la compétition ?
+  <br/>
+  Vous avez encore des questions, n'hésitez pas à consulter notre FAQ
+</div>

@@ -1,0 +1,22 @@
+.title{
+    position: relative;
+    top:8vw;
+    
+}
+.mainFrame{
+    position: relative;
+    top:12vw;
+    height: 75%;
+    width:100%;
+}
+.input{
+    position:relative;
+    top:9vw;
+}
+.col{
+    padding-left: 0%;
+}
+.progress{
+    position: relative;
+    top: 11vw;
+}

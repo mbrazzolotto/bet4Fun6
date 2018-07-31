@@ -1,0 +1,49 @@
+<div class="card containerSearch">
+  <div class="card-header"> Rejoindre un groupe</div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="name">Mot clef ou nom du groupe</label>
+        <input type="text" class="form-control" id="name" placeholder="nom du groupe">
+      </div>
+        <div class="btn-group" >
+            <button class="btn btn-info" (click)="search()" >Chercher</button>
+            <button class="btn btn-secondary" routerLink="/grp">Retour</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="card containerResult" *ngIf="groupes">
+  <div class="card-header">      
+    <div class="row">
+      <div class="col-sm-2">
+        Nom
+      </div>
+      <div class="col-sm-3">
+        Description
+      </div>
+      <div class="col-sm-3">
+        Nombre de membres
+      </div>
+      <div class="col-sm">
+          Action
+        </div>
+    </div></div>
+  <div class="card-body">
+      <div class="rowRes" *ngFor="let groupes of groupes">
+          <div class="col-sm-2">
+            {{groupes.nom}}
+          </div>
+          <div class="col-sm-3">
+              {{groupes.description}}
+          </div>
+          <div class="col-sm-3">
+              {{groupes.nbMembres}}
+          </div>
+          <div class="col-sm-1">
+              <button class="btn btn-info" >Rejoindre</button>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer"><span class="badge badge-info">Nombre de groupes: {{groupes.length}}</span></div>
+</div>

@@ -1,0 +1,137 @@
+<div class="card bestProno">
+        <div class="card-header">
+            Meilleurs pronostiqueurs 
+        </div>
+        <div class="card-body prono">
+                <div class="row">
+                        <div class="col-md">Mode Classic</div> <div class="col-xs"><button class="btn btn-info"><span class="ion ion-md-podium" name=""></span></button></div>
+                    </div>
+                
+            <li class="list-group-item list-rank" *ngFor="let m of ranking; let i = index;">
+                <div class="row">
+                    <div class="col-md-auto">{{i +1}}</div> <div class="col-md">{{m.login}}</div><div class="col-md">{{m.total}}</div>
+                </div>
+            </li>
+        </div>
+        <div class="card-body prono">
+                <div class="row">
+                        <div class="col-md">Mode Predictor</div> <div class="col-xs"><button class="btn btn-info"><span class="ion ion-md-podium" name=""></span></button></div>
+                    </div>
+            <li class="list-group-item list-rank" *ngFor="let m of ranking; let i = index;">
+                <div class="row">
+                    <div class="col-md-auto">{{i +1}}</div> <div class="col-md">{{m.login}}</div><div class="col-md">{{m.total}}</div>
+                </div>
+            </li>
+        </div>
+        <div class="card-body prono">
+                <div class="row">
+                        <div class="col-md">Mode Eliminatoire</div> <div class="col-xs"><button class="btn btn-info"><span class="ion ion-md-podium" name=""></span></button></div>
+                    </div>
+            <li class="list-group-item list-rank" *ngFor="let m of ranking; let i = index;">
+                <div class="row">
+                    <div class="col-md-auto">{{i +1}}</div> <div class="col-md">{{m.login}}</div><div class="col-md">{{m.total}}</div>
+                </div>
+            </li>
+        </div>
+    </div>
+<div class="container">
+  <div class="row ">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+            Latest results
+        </div>
+        <div class="card-body">
+            <li class="list-group-item" *ngFor="let m of matches">
+                <div class="row">
+                    <div class="col-sm">{{m.equipe1}}</div><div class="col-sm-1">{{m.scoreE1}}</div> - <div class="col-sm-1">{{m.scoreE2}} </div><div class="col-sm">{{m.equipe2}}</div>
+                </div>
+                <div class="progress">
+                        <div class="progress-bar-animated progress-bar-striped bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                        <div class="progress-bar-animated progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">10%</div>
+                        <div class="progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">60%</div>
+                </div>
+            </li>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+          <div class="card-header">
+              Upcoming Matches
+          </div>
+          <div class="card-body">
+                <li class="list-group-item" *ngFor="let m of matches">
+                    <div class="row">
+                        <div class="col-sm">{{m.equipe1}}</div><div class="col-sm-1">{{m.scoreE1}}</div> - <div class="col-sm-1">{{m.scoreE2}} </div><div class="col-sm">{{m.equipe2}}</div>
+                    </div>
+                    <div class="progress">
+                            <div class="progress-bar-animated progress-bar-striped bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                            <div class="progress-bar-animated progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">10%</div>
+                            <div class="progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">60%</div>
+                    </div>
+                </li>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col">
+      <div class="card">
+          <div class="card-header">
+              Stats pour les 8ème de final
+          </div>
+          <div class="card-body">
+                <li class="list-group-item" *ngFor="let e of teams">
+                        <div class="row">
+                            <div class="col"><img src="../../assets/logo/{{e.logo}}">{{e.name}}</div>
+                            <div class="col">
+                                <div class="progress">
+                                        <div class="progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                </div>
+                                </div>  
+                    </div>
+                </li>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card">
+          <div class="card-header">
+              Stats pour les finalistes
+          </div>
+          <div class="card-body">
+                <li class="list-group-item" *ngFor="let e of equipes">
+                        <div class="row">
+                            <div class="col">{{e.equipe}}</div>
+                            <div class="col">
+                                <div class="progress">
+                                        <div class="progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                </div>
+                                </div>  
+                    </div>
+                </li>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                Stats pour les vainqueurs
+            </div>
+            <div class="card-body">
+                    <li class="list-group-item" *ngFor="let e of equipes">
+                            <div class="row">
+                                <div class="col">{{e.equipe}}</div>
+                                <div class="col">
+                                    <div class="progress">
+                                            <div class="progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                    </div>  
+                        </div>
+                    </li>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container card">
+  <div class="card-header general">
+    <img class="avatar" [src]="profil.avatar"/>
+  </div>
+  <div class="card-body">
+    <div><span class="badge badge-info">Login</span><p> {{profil.login}}</p></div>
+    <div><span class="badge badge-info">Prénom</span><p>{{profil.prenom}}</p></div>
+    <div><span class="badge badge-info">Nom</span><p>{{profil.nom}}</p></div>
+    <div><span class="badge badge-info">EMail</span><p> {{profil.email}}</p></div> 
+    <div><span class="badge badge-info">Recevoir des Emails de bet4fun</span><br><input type="checkbox" [checked]="profil.notif" disabled/><label>Oui</label></div>
+    <div class="btn-group" role="group">
+      <button class="btn btn-info">Modifier</button>
+      <button class="btn btn-secondary">Changer de mot de passe</button>
+    </div>
+  </div>
+</div>
+<div class="container card info">
+  <div class="card-header">
+    Infos du compte Dracula
+  </div>
+  <div>
+    <div><span class="badge badge-info">Nombre de connexions</span><p> {{profil.info.nbCo}}</p></div>
+    <div><span class="badge badge-info">Dernière connexion</span><p>{{profil.info.derniereCo}}</p></div>
+    <div><span class="badge badge-info">Date de création</span><p> {{profil.info.dateCrea}}</p></div>
+  </div>
+</div>

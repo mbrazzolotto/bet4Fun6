@@ -1,0 +1,36 @@
+@media (min-width: 576px){
+    .title{
+        position: relative;
+        top:10vw;
+    }
+    .card{
+        margin:1%;
+        position: relative;
+        top:12vw;
+        min-width: 770px;;
+    }
+    .card-header{
+        background: rgb(19, 145, 196);
+        color:rgb(173, 221, 247);
+        text-shadow: 1px 0.5px rgb(58, 79, 82);
+        width: 100%;
+    }
+    .row{
+        position: relative;
+        min-width: 580px;
+    }
+    .input{
+        position:relative;
+        top:11vw;
+    }
+    .badge{
+        float: left;
+    }
+    .spacing{
+        margin-bottom: 5px;
+     
+    }
+    .spacing:nth-child(even){
+        background: rgb(235, 242, 245);
+    }
+}

@@ -1,0 +1,27 @@
+.card{
+    top:8vw;
+    width:50%;
+    position: relative;
+    overflow: auto;
+    display: block;
+    box-shadow: 1px 1px 30px rgb(187, 188, 189);
+}
+.general{
+    position: relative;
+    background-color: #007EB1;
+    margin-top: 0.5vw;
+    height:8vw;
+}
+
+.avatar{
+    height:6vw;
+    
+    position: relative;
+    width: auto;
+}
+.badge{ 
+    position: relative;
+}
+.info{
+    margin-top: 1vw;
+}

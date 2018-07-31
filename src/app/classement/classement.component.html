@@ -1,0 +1,86 @@
+<div class="container">
+<div class="title"><h4>Mode {{mode}} - {{championship}} {{year}}</h4></div>
+<div class="row input">
+  <div class="col">
+    <span class="badge badge-info">Phases</span>
+    <select class="form-control">
+      <option>Toutes les phases</option>
+      <option>Quarts de finale</option>
+      <option>Demi finale</option>
+      <option>Finale</option>
+    </select>
+  </div>
+  <div class="col">
+      <span class="badge badge-info">Groupes</span>
+      <select class="form-control">
+        <option>Osaxis</option>
+        <option>untruc</option>
+        <option>autre</option>
+        <option>bof</option>
+      </select>
+  </div>
+   <div class="col">
+      <span class="badge badge-info">Matches</span>
+      <select class="form-control">
+        <option>Match 1</option>
+        <option>Match 2</option>
+        <option>Match 3</option>
+        <option>Match 4</option>
+      </select>
+   </div>
+</div>
+</div>
+<div class="container">
+<div class="card">
+  <div class="card-header">
+      <div class="row">
+          <div class="col-sm">
+            #
+          </div>
+          <div class="col-sm-2">
+            Joueur
+          </div>
+          <div class="col-sm-2">
+            Nombre de Paris
+          </div>
+          <div class="col-sm">
+            Bon Paris
+          </div>
+          <div class="col-sm">
+            Score exact
+          </div>
+          <div class="col-sm">
+            Bonus Classement
+          </div>
+          <div class="col-sm">
+              Total Points
+          </div>
+        </div>
+  </div>
+  <div class="card-body">
+    <div class="row spacing" *ngFor="let ranking of ranking;let i=index">
+    <div class="col-sm">
+      {{i}}
+      </div>
+      <div class="col-sm-2">
+        {{ranking.login}}
+      </div>
+      <div class="col-sm-2">
+        {{ranking.nbParis}}
+      </div>
+      <div class="col-sm">
+        {{ranking.bonParis}}
+      </div>
+      <div class="col-sm">
+        {{ranking.scoreExact}}
+      </div>
+      <div class="col-sm">
+        {{ranking.bonus}}
+      </div>
+      <div class="col-sm">
+        {{ranking.total}}
+      </div>
+    </div>
+  </div>  
+</div>
+</div>

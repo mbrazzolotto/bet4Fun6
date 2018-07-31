@@ -1,0 +1,16 @@
+.title{
+    top:10vw;
+}
+.container{
+    position: relative;
+    top:8vw;
+}
+.form-control{
+    width:100%;
+    margin-top:2%;
+    margin-left: 0;
+}
+.btn-group{
+    margin-top: 2%;
+    padding-left: 0;
+}

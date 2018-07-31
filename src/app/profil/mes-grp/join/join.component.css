@@ -1,0 +1,21 @@
+.containerSearch{
+    top:10vw;
+    left:5vw;
+    width: 25vw;
+    position: absolute;
+}
+.containerResult{
+    top:10vw;
+    float:right;
+    right:5vw;
+    width: 60vw;
+    position: absolute;
+}
+.rowRes{
+    height: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-body{
+    
+}

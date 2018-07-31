@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-header">
+      <div class="row">
+          <div class="col-sm-2 col-xs-2">
+            Nom
+          </div>
+          <div class="col-sm-3 col-xs-3">
+            Description
+          </div>
+          <div class="col-sm-3 col-xs-3">
+            Rôle/Etat
+          </div>
+          <div class="col-sm col-xs btn-group" role="group">
+              <button class="btn btn-info" routerLink="/creagrp">Créer un groupe</button>
+              <button class="btn btn-secondary" routerLink="/joingrp">Rejoindre un groupe</button>
+          </div>
+        </div>
+  </div>
+  <div class="card-body">
+    <div class="row" *ngFor="let groupes of groupes">
+        <div class="col-sm-2 col-xs-2">
+          {{groupes.nom}}
+        </div>   
+      <div class="col-sm-3 col-xs-3">
+          {{groupes.description}}
+      </div>
+      <div class="col-sm-3 col-xs-3">
+          {{groupes.role}}
+      </div>
+      <div class="col-sm col-xs"></div>
+      </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

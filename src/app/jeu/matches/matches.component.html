@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row" *ngFor="let i of groupes">
+    <div class="col-sm" *ngFor="let i of groupes">
+      <div class="card">
+          <div class="card-header" data-toggle="collapse" (click)="expand= !expand">Groupe {{i|uppercase}}<button class="btn btn-info"><span class="ion ion-md-podium" name=""></span></button></div>
+          <div class="card-body" *ngIf="expand">
+            <div class="list-group collapseExample" id="collapseExample" *ngFor="let m of matches" >
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm">{{m.equipe1}}</div><div class="col-sm-1">{{m.scoreE1}}</div> - <div class="col-sm-1">{{m.scoreE2}} </div><div class="col-sm">{{m.equipe2}}</div>
+                  </div>
+                </li>
+            </div>  
+          </div>
+          <div class="card-body" *ngIf="!expand">
+              <div class="row"*ngFor="let e of equipes" >
+                    <li class="list-group-item equipe">{{e.equipe}}</li>
+                  </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

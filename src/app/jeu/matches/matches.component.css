@@ -1,0 +1,21 @@
+.card{
+    margin:1%;
+    max-width: 1000px;
+}
+
+.card-header{
+    font-size: 1vw;
+    width: 100%;
+    background:  rgb(53, 68, 82);
+    color:rgb(199, 223, 236);
+    text-shadow: 1px 0.5px rgb(58, 79, 82);
+}
+.equipe{
+    width: 100%;
+}
+.btn{
+    float: right;
+}
+.col-sm{
+    padding: 0;
+}

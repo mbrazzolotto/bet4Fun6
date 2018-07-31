@@ -1,0 +1,66 @@
+<div class="container">
+
+<div class="card">
+  <div class="card-body" *ngIf="co">
+    <div class="connexion">
+      <h3>Connexion</h3>
+        <div class="form-group">
+            <span class="badge badge-info">Login</span><input type="text" class="form-control"/>
+            <span class="badge badge-info">Mot de passe</span><input type="password" class="form-control"/>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+              </div>
+            <div class="btn-group" role="group">
+                <button class="btn btn-info" routerLink="/creagrp">Entrer</button>
+                <button class="btn btn-secondary" (click)="change('inscription')">S'inscrire</button>
+            </div><br>
+            <span class="badge badge-info" (click)="change('forgetpass')">Mot de passe oublié</span>
+        </div>
+    </div>
+  </div>  
+  <div class="card-body" *ngIf="inscription">
+    <div class="inscription" >
+        <h3>Inscription</h3>
+        <div class="form-group">
+            <span class="badge badge-info">Login</span><input type="text" class="form-control"/>
+            <span class="badge badge-info">Mot de passe</span><input type="password" class="form-control"/>
+            <span class="badge badge-info">Confirmation mot de passe</span><input type="password" class="form-control"/>
+            <span class="badge badge-info">Nom</span><input type="text" class="form-control"/>
+            <span class="badge badge-info">Prénom</span><input type="text" class="form-control"/>
+            <span class="badge badge-info">Email</span><input type="email" class="form-control"/>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+            </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-info" routerLink="/creagrp">Créer</button>
+              <button class="btn btn-secondary" (click)="change('co')">Annuler</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card-body" *ngIf="forgetpass">
+    <div class="forgetPass">
+        <h3>Mot de passe oublié</h3>
+        <span class="badge badge-info">Login</span><input type="text" class="form-control"/>
+        <div class="btn-group" role="group">
+            <button class="btn btn-info" routerLink="/creagrp">Initialiser</button>
+            <button class="btn btn-secondary" (click)="change('co')">Annuler</button>
+        </div><br>
+        <span class="badge badge-info" (click)="change('forgetid')">Identifiant oublié</span>
+    </div>
+  </div>
+  <div class="card-body" *ngIf="forgetid">
+    <div class="forgetLogin">
+      <h3>Mot de passe oublié</h3>
+      <span class="badge badge-info">Email</span><input type="email" class="form-control"/>
+      <div class="btn-group" role="group">
+          <button class="btn btn-info" routerLink="/creagrp">Interroger</button>
+          <button class="btn btn-secondary" (click)="change('co')">Annuler</button>
+      </div><br>
+      <span class="badge badge-info" (click)="change('forgetpass')">Saisir identifiant ?</span>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="header">
+  <div class="row" [ngStyle]="{'font-size.vw':1}">
+    <div class="col-2 logo"><img src="../../assets/logo.png"/></div>
+    <div class="col-md-auto menuBtn" (mouseover)="toggleUpSubMenu(true)"> 
+      <a role="button" routerLink="/accueil"><span class="ion ion-md-home"></span></a>  
+    </div>
+    <div class="col-md-auto menuBtn" (mouseover)="toggleDownSubMenu('predictor')" (mouseleave)="toggleUpSubMenu(false)" [class.toggleSub]="menu==='predictor'"> 
+      <a class="t" href="#" role="button"><span class="ion ion-md-flash"></span>
+        <p>Predictor</p>
+      </a>
+    </div>
+    <div class="col-md-auto menuBtn" (mouseover)="toggleDownSubMenu('eliminatoire')" (mouseleave)="toggleUpSubMenu(false)" [class.toggleSub]="menu==='eliminatoire'"> 
+      <a  class="" href="#" role="button" ><span class="ion ion-md-locate"></span>
+        <p>Eliminatore</p>
+      </a>
+    </div>
+    <div class="col-md-auto menuBtn" (mouseover)="toggleDownSubMenu('classic')" (mouseleave)="toggleUpSubMenu(false)" [class.toggleSub]="menu==='classic'"> 
+      <a  class="" href="#" role="button" id="dropdownMenuLink"   aria-expanded="false"><span class="ion ion-md-football"></span>
+        <p>Classicator</p>
+    </a>
+    </div>
+    <div class="col-md menuBtn"></div>
+    <div class="col-md menuBtn"></div>
+    <div class="col-md menuBtn"></div>
+    <div class="col-md menuBtn"></div>
+    <div class="col-md-auto menuBtn profil" (mouseover)="toggleDownSubInfoMenu('info')" (mouseleave)="toggleUpSubInfoMenu(false)" [class.toggleSub]="menu==='info'">
+      <a  class="" href="#" role="button" id="dropdownMenuLink"   aria-expanded="false">
+        <span class="ion ion-md-information-circle"></span>
+      </a>
+    </div>
+    <div class="col-md-auto menuBtn profil" (mouseover)="toggleDownSubProfilMenu('profil')" (mouseleave)="toggleUpSubProfilMenu(false)" [class.toggleSub]="menu==='profil'"> 
+        <a  class="" href="#" role="button" id="dropdownMenuLink"   aria-expanded="false">
+          <span class="ion ion-md-person"></span>
+      </a>
+      </div>
+  </div>
+  <div [@menuState]='toggleSub' class="toggleSub"  (mouseover)="toggleDownSubMenu(menu)" (mouseleave)="toggleUpSubMenu(true)">
+    <ul class="nav ul" >
+        <li>
+            <a routerLink="/jeu">Jeu</a>
+        </li>
+        <li >
+            <a routerLink="/classement">Classement</a>
+        </li>
+        <li>
+            <a routerLink="/regle">Règlement</a>
+        </li>
+      </ul>
+  </div>
+  <div [@menuState]='toggleSubProfil' class="toggleSub"  (mouseover)="toggleDownSubProfilMenu(menu)" (mouseleave)="toggleUpSubProfilMenu(true)" >
+    <ul class="nav pro">
+        <li>
+            <a routerLink="/regle">Deconnexion</a>
+        </li>
+        <li >
+            <a routerLink="/grp">Mes Groupes</a>
+        </li>
+        <li>
+            <a  routerLink="/profil">Mon Profil</a>
+        </li>
+      </ul>
+  </div>
+  <div [@menuState]='toggleSubInfo' class="toggleSub"  (mouseover)="toggleDownSubInfoMenu(menu)" (mouseleave)="toggleUpSubInfoMenu(true)" >
+      <ul class="nav info">
+            <li>
+                    <a routerLink="/contact">Contact</a>
+            </li>
+            <li >
+                <a routerLink="/regle">FAQ</a>
+            </li>
+            <li>
+                <a  routerLink="/regle">Règlements</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

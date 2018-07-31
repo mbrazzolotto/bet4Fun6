@@ -1,0 +1,17 @@
+.card{
+    top:8vw;
+    position: relative;
+    width:80vw;
+    left:10vw;
+}
+.row{
+    height: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-header{
+    background:  rgb(53, 68, 82);
+    color:rgb(199, 223, 236);
+    text-shadow: 1px 0.5px rgb(58, 79, 82);
+    
+}
